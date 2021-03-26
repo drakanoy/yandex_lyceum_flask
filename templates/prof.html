@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if 'инженер' in prof %}
+    <h2>Инженерные тренажеры</h2>
+{% else %}
+    <h2>Научные симуляторы</h2>
+{% endif %}
+{% endblock %}
+{% block content1 %}
+{% if 'инженер' in prof %}
+    <img src={{img1}} alt="здесь должна была быть картинка, но не нашлась">
+{% else %}
+    <img src={{img2}} alt="здесь должна была быть картинка, но не нашлась">
+{% endif %}
+{% endblock %}
