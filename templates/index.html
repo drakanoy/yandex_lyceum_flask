@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>Четное-нечетное</title>
 </head>
-    <body>
-        <h1>Привет, {{ username }}!</h1>
-    </body>
+<body>
+ {% if number % 2 == 0 %}
+        <div>{{ number }} - чётное</div>
+ {% else %}
+       <div>{{ number }} - нечётное</div>
+ {% endif %}
+</body>
 </html>
