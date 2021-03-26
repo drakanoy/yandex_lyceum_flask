@@ -6,11 +6,11 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
-@app.route('/')
-@app.route('/index')
-def index():
+@app.route('/<title>')
+@app.route('/index/<title>')
+def index(title):
     param = {}
-    param['title'] = ''
+    param['title'] = title
     return render_template('index.html', **param)
 
 
