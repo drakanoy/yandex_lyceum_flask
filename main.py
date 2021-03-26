@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
     param = {}
     param['username'] = "Ученик Яндекс.Лицея"
-    param['title'] = 'Домашняя страница'
+    param['number'] = 21
     return render_template('index.html', **param)
 
 
