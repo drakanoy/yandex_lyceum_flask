@@ -10,8 +10,7 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 @app.route('/index')
 def index():
     param = {}
-    param['username'] = "Ученик Яндекс.Лицея"
-    param['title'] = 'загатовка'
+    param['title'] = ''
     return render_template('index.html', **param)
 
 
