@@ -31,5 +31,13 @@ def prof(prof):
     return render_template('prof.html', **param)
 
 
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    param = {}
+    param['list'] = list
+    param['l1'] = ['инженер', 'программист', 'пилот', 'гений', 'не гуманитарий', 'ладно гуманитарий тоже', 'шут', 'марсианин']
+    return render_template('prof_list.html', **param)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
